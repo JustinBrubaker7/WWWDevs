@@ -1,20 +1,23 @@
 import "./App.css";
-import HeroSections from "./Components/HeroSection.js";
-import CallToAction from "./Components/CallToAction.js";
-import FeaturesSection from "./Components/FeaturesSection";
-import ReviewsSection from "./Components/ReviewsSection";
-import FAQSection from "./Components/FAQSection";
-import TheProcessSection from "./Components/TheProcessSection";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Routes,
+} from "react-router-dom";
+
+import HomePage from "./pages/HomePage";
+import PricingPage from "./pages/PricingPage";
+import ContactPage from "./pages/ContactPage";
 
 function App() {
   return (
     <div className="App">
-      <HeroSections />
-      <CallToAction />
-      <FeaturesSection />
-      <TheProcessSection />
-      <ReviewsSection />
-      <FAQSection />
+      <Routes>
+        <Route path="/" exact element={<HomePage />} />
+        <Route path="/pricing" exact element={<PricingPage />} />
+        <Route path="/contact" exact element={<ContactPage />} />
+      </Routes>
     </div>
   );
 }

@@ -1,52 +1,50 @@
 /* This example requires Tailwind CSS v2.0+ */
 import {
-  NewspaperIcon,
-  PhoneIcon,
-  SupportIcon,
+  ArrowNarrowRightIcon,
 } from "@heroicons/react/outline";
 
 const supportLinks = [
   {
-    name: "Sales",
+    name: "Complete Our Questionnaire",
     href: "#",
     description:
-      "Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.",
-    icon: PhoneIcon,
+      "Fill out our detailed questionnaire so we can get a base understanding of your dream website and specific needs/features.",
+    icon: ArrowNarrowRightIcon,
   },
   {
-    name: "Technical Support",
+    name: "Consultation",
     href: "#",
     description:
-      "Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.",
-    icon: SupportIcon,
+      "Each project will include a free 60 min consultation to review goals, plans, and to ensure we are giving you the website you want.",
+    icon: ArrowNarrowRightIcon,
   },
   {
-    name: "Media Inquiries",
+    name: "The Work Begins",
     href: "#",
     description:
-      "Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.",
-    icon: NewspaperIcon,
+      "Once we have a clear vision, the designing process begins. Depending on the package you select, this may be a template or fully custom design mock ups.",
+    icon: ArrowNarrowRightIcon,
   },
   {
-    name: "Sales",
+    name: "Review Design",
     href: "#",
     description:
-      "Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.",
-    icon: PhoneIcon,
+      "We will meet with you to review the design and discuss any changes you may want to make. This is a great time to ask any questions you may have.",
+    icon: ArrowNarrowRightIcon,
   },
   {
-    name: "Technical Support",
+    name: "Revisions and Final Touches",
     href: "#",
     description:
-      "Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.",
-    icon: SupportIcon,
+      "We are now in the home stretch of the project! Time to address any last details and we will also make sure the website is ready for launch.",
+    icon: ArrowNarrowRightIcon,
   },
   {
-    name: "Media Inquiries",
+    name: "Launch Day",
     href: "#",
     description:
-      "Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.",
-    icon: NewspaperIcon,
+      "We will meet once more to discuss next steps moving forward and final to-do items. Time to celebrate! The hard work is over, now it's time to enjoy your killer website.",
+    icon: ArrowNarrowRightIcon,
   },
 ];
 
@@ -68,13 +66,8 @@ export default function TheProcessSection() {
         </div>
         <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8 ">
           <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl">
-            Support
+            Our Process
           </h1>
-          <p className="mt-6 max-w-5xl text-xl text-gray-300 ">
-            Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate
-            id malesuada non. Cras aliquet purus dui laoreet diam sed lacus,
-            fames. Dui, amet, nec sit pulvinar.
-          </p>
         </div>
       </div>
 
@@ -84,7 +77,7 @@ export default function TheProcessSection() {
         aria-labelledby="contact-heading"
       >
         <h2 className="sr-only" id="contact-heading">
-          Contact us
+          Our Process
         </h2>
         <div className="grid grid-cols-1 gap-y-20 lg:grid-cols-3 lg:gap-y-0 lg:gap-x-8">
           {supportLinks.map((link) => (
@@ -93,10 +86,14 @@ export default function TheProcessSection() {
               className="flex flex-col bg-white rounded-2xl shadow-xl md:mb-16"
             >
               <div className="flex-1 relative pt-16 px-6 pb-8 md:px-8">
-                <div className="absolute top-0 left-6 p-5 inline-block bg-indigo-600 rounded-xl shadow-lg transform -translate-y-1/2">
-                  <link.icon
+                <div className="absolute top-0 left-6 p-5 inline-block bg-yellow-400 rounded-xl shadow-lg transform -translate-y-1/2">
+                  {/* <link.icon
                     className="h-6 w-6 text-white"
                     aria-hidden="true"
+                  /> */}
+                  <img
+                    className="h-8"
+                    src={require("../assets/images/1 (1).png")}
                   />
                 </div>
                 <h3 className="text-xl font-medium text-gray-900">
@@ -105,14 +102,6 @@ export default function TheProcessSection() {
                 <p className="mt-4 text-base text-gray-500">
                   {link.description}
                 </p>
-              </div>
-              <div className="p-6 bg-gray-50 rounded-bl-2xl rounded-br-2xl md:px-8">
-                <a
-                  href={link.href}
-                  className="text-base font-medium text-indigo-700 hover:text-indigo-600"
-                >
-                  Contact us<span aria-hidden="true"> &rarr;</span>
-                </a>
               </div>
             </div>
           ))}

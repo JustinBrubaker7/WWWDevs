@@ -1,29 +1,14 @@
-/*
-  This example requires Tailwind CSS v2.0+ 
-  
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
+import logo from "../assets/images/small-logo-white.png";
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { ChevronRightIcon } from "@heroicons/react/solid";
+import heroSvg from "../assets/images/HeroSvg.svg";
 
 const navigation = [
-  { name: "Product", href: "#" },
-  { name: "Features", href: "#" },
-  { name: "Marketplace", href: "#" },
-  { name: "Company", href: "#" },
+  { name: "Pricing", href: "/pricing" },
+  { name: "Our Work", href: "#" },
+  { name: "Contact", href: "#" },
 ];
 
 export default function HeroSection() {
@@ -40,8 +25,8 @@ export default function HeroSection() {
                 <a href="#">
                   <span className="sr-only">Workflow</span>
                   <img
-                    className="h-8 w-auto sm:h-10"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
+                    className="h-16 w-auto"
+                    src={require("../assets/images/small-logo-white.png")}
                     alt=""
                   />
                 </a>
@@ -64,7 +49,7 @@ export default function HeroSection() {
                 ))}
               </div>
             </div>
-            <div className="hidden md:flex md:items-center md:space-x-6">
+            {/* <div className="hidden md:flex md:items-center md:space-x-6">
               <a
                 href="#"
                 className="text-base font-medium text-white hover:text-gray-300"
@@ -77,7 +62,7 @@ export default function HeroSection() {
               >
                 Start free trial
               </a>
-            </div>
+            </div> */}
           </nav>
         </div>
 
@@ -99,7 +84,7 @@ export default function HeroSection() {
                 <div>
                   <img
                     className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                    src={require("../assets/images/small-logo-white.png")}
                     alt=""
                   />
                 </div>
@@ -122,22 +107,6 @@ export default function HeroSection() {
                     </a>
                   ))}
                 </div>
-                <div className="mt-6 px-5">
-                  <a
-                    href="#"
-                    className="block text-center w-full py-3 px-4 rounded-md shadow bg-indigo-600 text-white font-medium hover:bg-indigo-700"
-                  >
-                    Start free trial
-                  </a>
-                </div>
-                <div className="mt-6 px-5">
-                  <p className="text-center text-base font-medium text-gray-500">
-                    Existing customer?{" "}
-                    <a href="#" className="text-gray-900 hover:underline">
-                      Login
-                    </a>
-                  </p>
-                </div>
               </div>
             </div>
           </Popover.Panel>
@@ -151,26 +120,31 @@ export default function HeroSection() {
               <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
                 <div className="lg:py-24">
                   <a
-                    href="#"
+                    href="/contact"
                     className="inline-flex items-center text-white bg-black rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200"
                   >
-                    <span className="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-indigo-500 rounded-full">
-                      We're hiring
+                    <span className="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-yellow-500 rounded-full">
+                      Need A Website
                     </span>
-                    <span className="ml-4 text-sm">Visit our careers page</span>
+                    <span className="ml-4 text-sm">
+                      Contact Us To Get Started
+                    </span>
                     <ChevronRightIcon
                       className="ml-2 w-5 h-5 text-gray-500"
                       aria-hidden="true"
                     />
                   </a>
                   <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
-                    <span className="block">A better way to</span>
-                    <span className="block text-indigo-400">ship web apps</span>
+                    <span className="block">We Make</span>
+                    <span className="block text-yellow-400">
+                      Killer Websites
+                    </span>
                   </h1>
                   <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                    Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
-                    qui Lorem cupidatat commodo. Elit sunt amet fugiat veniam
-                    occaecat fugiat.
+                    Our websites are built with the latest technologies and are
+                    a great way to grow your business online. We build websites
+                    that are responsive, fast, and secure but won't break the
+                    bank.
                   </p>
                   <div className="mt-10 sm:mt-12">
                     <form action="#" className="sm:max-w-xl sm:mx-auto lg:mx-0">
@@ -189,19 +163,14 @@ export default function HeroSection() {
                         <div className="mt-3 sm:mt-0 sm:ml-3">
                           <button
                             type="submit"
-                            className="block w-full py-3 px-4 rounded-md shadow bg-indigo-500 text-white font-medium hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-300 focus:ring-offset-gray-900"
+                            className="block w-full py-3 px-4 rounded-md shadow bg-yellow-500 text-white font-medium hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-300 focus:ring-offset-gray-900"
                           >
-                            Start free trial
+                            Get More Information
                           </button>
                         </div>
                       </div>
                       <p className="mt-3 text-sm text-gray-300 sm:mt-4">
-                        Start your free 14-day trial, no credit card necessary.
-                        By providing your email, you agree to our{" "}
-                        <a href="#" className="font-medium text-white">
-                          terms of service
-                        </a>
-                        .
+                        Will reach out shortly on your inquiry.
                       </p>
                     </form>
                   </div>
@@ -212,7 +181,7 @@ export default function HeroSection() {
                   {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
                   <img
                     className="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                    src="https://tailwindui.com/img/component-images/cloud-illustration-indigo-400.svg"
+                    src={heroSvg}
                     alt=""
                   />
                 </div>
