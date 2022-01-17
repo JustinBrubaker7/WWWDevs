@@ -1,9 +1,9 @@
-/* This example requires Tailwind CSS v2.0+ */
+import { Link } from "react-router-dom";
 const navigation = {
   main: [
-    { name: "Pricing", href: "#" },
-    { name: "Contact", href: "#" },
-    { name: "Our Work", href: "#" },
+    { name: "Pricing", href: "/pricing" },
+    { name: "Our Work", href: "/our-work" },
+    { name: "Contact", href: "/contact" },
   ],
   social: [
     {
@@ -80,12 +80,12 @@ export default function Footer() {
         >
           {navigation.main.map((item) => (
             <div key={item.name} className="px-5 py-2">
-              <a
-                href={item.href}
+              <Link
+                to={item.href}
                 className="text-base text-yellow-400 hover:text-white"
               >
                 {item.name}
-              </a>
+              </Link>
             </div>
           ))}
         </nav>
