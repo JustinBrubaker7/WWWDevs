@@ -1,20 +1,5 @@
-import { Fragment } from "react";
-import { Popover, Transition } from "@headlessui/react";
-import {
-  BookmarkAltIcon,
-  CalendarIcon,
-  ChartBarIcon,
-  CursorClickIcon,
-  MenuIcon,
-  PhoneIcon,
-  PlayIcon,
-  RefreshIcon,
-  ShieldCheckIcon,
-  SupportIcon,
-  ViewGridIcon,
-  XIcon,
-} from "@heroicons/react/outline";
-import { CheckIcon, ChevronDownIcon, MinusIcon } from "@heroicons/react/solid";
+import { Link } from "react-router-dom";
+import { CheckIcon } from "@heroicons/react/solid";
 import Nav from "../Components/Nav";
 import Footer from "../Components/Footer";
 
@@ -24,45 +9,54 @@ const pricing = {
       title: "Starter",
       price: "1,000",
       frequency: "",
-      description: "The essentials to provide your best work for clients.",
+      description: "Template WordPress Website",
       features: [
-        "5 products",
-        "Up to 1,000 subscribers",
-        "Basic analytics",
-        "48-hour support response time",
+        "3 pages",
+        "Free 1hr Consultation",
+        "Mobile responsive",
+        "Contact form",
+        "2 revisions",
       ],
-      cta: "Monthly billing",
+      cta: "Due at Signing",
       mostPopular: false,
     },
     {
       title: "Pro",
       price: "2,500",
       frequency: "",
-      description: "A plan that scales with your rapidly growing business.",
+      description: "Customizable WordPress Theme",
       features: [
-        "25 products",
-        "Up to 10,000 subscribers",
-        "Advanced analytics",
-        "24-hour support response time",
-        "Marketing automations",
+        "5 pages",
+        "Free 1hr Consultation",
+        "Mobile responsive",
+        "Contact form",
+        "2 revisions",
+        "On page SEO",
+        "XML sitemap",
+        "Google Analytics",
       ],
-      cta: "Monthly billing",
+      cta: "Due at Signing",
       mostPopular: true,
     },
     {
       title: "Premium",
       price: "5,000+",
       frequency: "",
-      description: "Dedicated support and infrastructure for your company.",
+      description: "Fully Customizable WordPress Theme",
       features: [
-        "Unlimited products",
-        "Unlimited subscribers",
-        "Advanced analytics",
-        "1-hour, dedicated support response time",
-        "Marketing automations",
-        "Custom integrations",
+        "5 pages",
+        "Free 1hr Consultation",
+        "Mobile responsive",
+        "Contact form",
+        "2 revisions",
+        "On page SEO",
+        "XML sitemap",
+        "Google Analytics",
+        "Full Design Mock-ups",
+        "2 post-launch content updates",
+        "Branding guide based on website",
       ],
-      cta: "Monthly billing",
+      cta: "Due at Signing",
       mostPopular: false,
     },
   ],
@@ -91,7 +85,7 @@ export default function PricingPage() {
           </div>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-4 bg-white sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 bg-white sm:px-6 lg:px-8 mb-12">
         {/* Tiers */}
         <div className="mt-10 md:mt-16 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-8">
           {pricing.tiers.map((tier) => (
@@ -131,9 +125,12 @@ export default function PricingPage() {
                   ))}
                 </ul>
               </div>
+              <div className="mt-6">
+                <p>Additional pages are $200</p>
+              </div>
 
-              <a
-                href="#"
+              <Link
+                to={`/checkout?plan=${tier.title}&price=${tier.price}`}
                 className={classNames(
                   tier.mostPopular
                     ? "bg-yellow-400 text-white hover:bg-yellow-500"
@@ -142,7 +139,7 @@ export default function PricingPage() {
                 )}
               >
                 {tier.cta}
-              </a>
+              </Link>
             </div>
           ))}
         </div>

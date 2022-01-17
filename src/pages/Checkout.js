@@ -1,27 +1,50 @@
 import React, { useState, useEffect } from "react";
+import { DEV_SERVER as serverUrl } from "../utils/config";
+// import { LIVE_SERVER as serverUrl } from "../utils/config";
+import Nav from "../Components/Nav";
+import Footer from "../Components/Footer";
 
-const ProductDisplay = () => (
-  <section>
-    <div className="product">
-      {/* <img
-        src="https://i.imgur.com/EHyR2nP.png"
-        alt="The cover of Stubborn Attachments"
-      /> */}
-      <div className="description mt-96">
-        <h3>Template Website</h3>
-        <h5>$1000.00</h5>
-      </div>
+function ProductDisplay() {
+  const [product, setProduct] = useState([]);
+  const [price, setPrice] = useState("");
+
+  useEffect(() => {
+    const query = new URLSearchParams(window.location.search);
+    const plan = query.get("plan");
+    const price = query.get("price");
+    setProduct(plan);
+    setPrice(price);
+  }, []);
+
+  return (
+    <div>
+      <Nav />
+      <section className="bg-gray-100 h-full py-80">
+        <div className="product">
+          <div className="description ">
+            <h3 className="text-6xl">{product}</h3>
+            <h5 className="text-2xl text-yellow-400">${price}</h5>
+            <p className="pb-12">
+              You wont be charged until we sign our contact.
+            </p>
+          </div>
+        </div>
+        <form
+          action={`${serverUrl}/create-checkout-session-${product}`}
+          method="POST"
+        >
+          <button
+            type="submit"
+            className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-900 hover:bg-yellow-400"
+          >
+            Checkout
+          </button>
+        </form>
+      </section>
+      <Footer />
     </div>
-    <form action="http://localhost:4242/create-checkout-session" method="POST">
-      <button
-        type="submit"
-        className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-900 hover:bg-yellow-400"
-      >
-        Checkout
-      </button>
-    </form>
-  </section>
-);
+  );
+}
 
 const Message = ({ message }) => (
   <section>
