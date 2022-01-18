@@ -1,4 +1,6 @@
 /* This example requires Tailwind CSS v2.0+ */
+import { Link } from "react-router-dom";
+
 export default function CallToAction() {
   return (
     <div className="bg-white md:flex">
@@ -11,12 +13,12 @@ export default function CallToAction() {
         </h2>
         <div className="mt-8 flex justify-center ">
           <div className="inline-flex rounded-md shadow">
-            <a
-              href="#"
+            <Link
+              to="/contact"
               className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-900 hover:bg-yellow-400"
             >
               Contact Us
-            </a>
+            </Link>
           </div>
         </div>
       </div>
