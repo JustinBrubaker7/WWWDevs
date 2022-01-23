@@ -28,44 +28,40 @@ export default function ContactForm({ formSubmitted, setFormSubmitted }) {
   return (
     <div>
       {/* Header */}
-      <div className="py-24 bg-gray-900    sm:py-32">
+      <div className="py-16 bg-gray-900 sm:pt-24">
         <div className="max-w-md mx-auto pl-4 pr-8 sm:max-w-lg sm:px-6 lg:max-w-7xl lg:px-8">
           <h1 className="text-4xl leading-10 font-extrabold tracking-tight text-white text-center sm:text-5xl sm:leading-none lg:text-6xl">
             Get in touch
           </h1>
           <p className="mt-6 max-w-3xl mx-auto text-xl leading-normal text-yellow-400 text-center">
-            We are always happy to hear from you. Send us a message and we'll
-            get back to you as soon as possible.
+            <span>Let's work together! We're excited to hear from you.</span>
+            <br />
+            <span>Please allow 24 hours for a response on all inquiries.</span>
           </p>
         </div>
       </div>
       {/* Contact Section */}
       <div className="relative bg-white">
-        <div className="relative py-16 px-4 sm:py-24 sm:px-6 lg:px-8 l ">
-          <div className="l">
-            <div className="mx-auto sm:max-w-lg ">
-              <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
-                Let's work together
-              </h2>
-              <p className="mt-4 text-lg text-gray-500 sm:mt-3">
-                We’d love to hear from you! Send us a message using the form
-                below and we’ll get back to you as soon as possible.
-              </p>
+        <div className="relative px-4 py-12 sm:px-6 lg:px-8 pb-24">
+          <div className="">
+            <div className="mx-auto sm:max-w-lg">
               <form
                 ref={form}
                 onSubmit={sendEmail}
                 id="contact-form"
                 //   action="#"
                 //   method="POST"
-                className="mt-9 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
+                className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
               >
                 <div>
-                  <label
-                    htmlFor="first-name"
-                    className="block text-sm font-medium text-gray-700"
-                  >
-                    First name
-                  </label>
+                  <div className="flex justify-start">
+                    <label
+                      htmlFor="first-name"
+                      className="block text-sm font-medium text-gray-700"
+                    >
+                      First name
+                    </label>
+                  </div>
                   <div className="mt-1">
                     <input
                       type="text"
@@ -77,12 +73,14 @@ export default function ContactForm({ formSubmitted, setFormSubmitted }) {
                   </div>
                 </div>
                 <div>
-                  <label
-                    htmlFor="last-name"
-                    className="block text-sm font-medium text-gray-700"
-                  >
-                    Last name
-                  </label>
+                  <div className="flex justify-start">
+                    <label
+                      htmlFor="last-name"
+                      className="block text-sm font-medium text-gray-700"
+                    >
+                      Last name
+                    </label>
+                  </div>
                   <div className="mt-1">
                     <input
                       type="text"
@@ -94,12 +92,14 @@ export default function ContactForm({ formSubmitted, setFormSubmitted }) {
                   </div>
                 </div>
                 <div className="sm:col-span-2">
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-gray-700"
-                  >
-                    Email
-                  </label>
+                  <div className="flex justify-between">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-gray-700"
+                    >
+                      Email
+                    </label>
+                  </div>
                   <div className="mt-1">
                     <input
                       id="email"
@@ -111,12 +111,14 @@ export default function ContactForm({ formSubmitted, setFormSubmitted }) {
                   </div>
                 </div>
                 <div className="sm:col-span-2">
-                  <label
-                    htmlFor="company"
-                    className="block text-sm font-medium text-gray-700"
-                  >
-                    Company
-                  </label>
+                  <div className="flex justify-between">
+                    <label
+                      htmlFor="company"
+                      className="block text-sm font-medium text-gray-700"
+                    >
+                      Company
+                    </label>
+                  </div>
                   <div className="mt-1">
                     <input
                       type="text"
@@ -179,14 +181,15 @@ export default function ContactForm({ formSubmitted, setFormSubmitted }) {
                     />
                   </div>
                 </div>
-
                 <div className="sm:col-span-2">
-                  <label
-                    htmlFor="how-did-you-hear-about-us"
-                    className="block text-sm font-medium text-gray-700"
-                  >
-                    How did you hear about us?
-                  </label>
+                  <div className="flex justify-between">
+                    <label
+                      htmlFor="how-did-you-hear-about-us"
+                      className="block text-sm font-medium text-gray-700"
+                    >
+                      How did you hear about us?
+                    </label>
+                  </div>
                   <div className="mt-1">
                     <input
                       type="text"

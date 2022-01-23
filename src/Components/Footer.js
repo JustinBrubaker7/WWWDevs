@@ -82,7 +82,7 @@ export default function Footer() {
             <div key={item.name} className="px-5 py-2">
               <Link
                 to={item.href}
-                className="text-base text-yellow-400 hover:text-white"
+                className="text-base text-white hover:text-yellow-400"
               >
                 {item.name}
               </Link>

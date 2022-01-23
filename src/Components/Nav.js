@@ -40,7 +40,7 @@ export default function Nav() {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className="text-base font-medium text-white hover:text-gray-300"
+                  className="text-base font-medium text-white hover:text-yellow-400"
                 >
                   {item.name}
                 </Link>

@@ -2,39 +2,39 @@
 const faqs = [
   {
     id: 1,
-    question: "What's the best thing about Switzerland?",
+    question: "How long will the entire process take?",
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "This will depend on the package you select. For our Starter Package, you can expect a live website in 4-6 weeks. For the Premium Package, 8-10 weeks.",
   },
   {
     id: 1,
-    question: "What's the best thing about Switzerland?",
+    question: "Do you only do WordPress websites?",
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "Not at all! We also build web applications, e-commerce stores, super fast landing pages built with Gatsby, and more!",
   },
   {
     id: 1,
-    question: "What's the best thing about Switzerland?",
+    question: "Do I have to pay in full up front?",
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "No. We do require a 50% deposit to start the project. The remaining balance will be paid in full at project completion.",
   },
   {
     id: 1,
-    question: "What's the best thing about Switzerland?",
+    question: "Do you provide website hosting and domain?",
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "We do not. We can make recommendations and give helpful resources. We will also help you get set up if you need assistance.",
   },
   {
     id: 1,
-    question: "What's the best thing about Switzerland?",
+    question: "Will you create content for my website?",
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "You know your business best, so we will look to you for all content, logos, and photography you wish to include on your website.",
   },
   {
     id: 1,
-    question: "What's the best thing about Switzerland?",
+    question: "What if I need help in the future?",
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "Don't worry! We're here for you. Check out our pricing page for information on ongoing maintenance and updates.",
   },
   // More questions...
 ];

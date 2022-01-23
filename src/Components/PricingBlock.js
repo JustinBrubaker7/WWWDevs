@@ -2,62 +2,44 @@ import { Link } from "react-router-dom";
 import { CheckIcon } from "@heroicons/react/solid";
 import Nav from "../Components/Nav";
 import Footer from "../Components/Footer";
-import PricingBlock from "../Components/PricingBlock";
 
 const pricing = {
   tiers: [
     {
-      title: "Starter",
+      title: "Gatsby Landing Page",
       price: "1,000",
       frequency: "",
-      description: "Template WordPress Website",
+      description: "Super fast landing page with great SEO",
       features: [
-        "3 pages",
-        "Free 1hr Consultation",
-        "Mobile responsive",
-        "Contact form",
-        "2 revisions",
+        "Single page",
+        "Super fast landing page",
+        "Custom Designed",
+        "If you need a fast website that cares about SEO but doesn't need alot of pages this is for you",
       ],
       cta: "Select this package",
       mostPopular: false,
     },
     {
-      title: "Pro",
+      title: "Ecommerce Store Setup",
       price: "2,500",
       frequency: "",
       description: "Partially Customized WordPress Template",
-      features: [
-        "5 pages",
-        "Free 1hr Consultation",
-        "Mobile responsive",
-        "Contact form",
-        "2 revisions",
-        "On page SEO - Homepage",
-        "XML sitemap",
-        "Google Analytics",
-      ],
+      features: ["5 pages"],
       cta: "Select this package",
-      mostPopular: true,
+      mostPopular: false,
     },
     {
-      title: "Premium",
-      price: "5,000+",
-      frequency: "",
-      description: "Fully Customizable WordPress Theme",
+      title: "Ongoing webiste support",
+      price: "50",
+      frequency: "/hr",
+      description: "Continued support after website launch",
       features: [
-        "5 pages",
-        "Free 1hr Consultation",
-        "Mobile responsive",
-        "Contact form",
-        "2 revisions",
-        "On page SEO - all pages",
-        "XML sitemap",
-        "Google Analytics",
-        "Full Design Mock-ups",
-        "2 post-launch content updates",
-        "Branding guide based on website",
+        "Hourly Rate",
+        "Update Content",
+        "New Feature to existing site",
+        "Anything else you need done",
       ],
-      cta: "Select this package",
+      cta: "Checkout",
       mostPopular: false,
     },
   ],
@@ -67,33 +49,9 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function PricingPage() {
+export default function PricingBlock() {
   return (
     <div className="bg-white">
-      <div className="bg-gray-900">
-        <Nav />
-
-        <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8 lg:max-w-7xl">
-          <div className="px-0 sm:px-4 lg:px-0 lg:flex lg:justify-center lg:items-center">
-            <div className="max-w-xl">
-              <h2 className="text-4xl font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl">
-                Package Options
-              </h2>
-              <p className="mt-5 text-xl text-yellow-400">
-                We offer a variety of packages to suit your needs and budget.
-                <br />
-                <span className="font-bold">
-                  You will not be charged until we sign our work agreement with
-                  a 50% deposit.
-                </span>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <h2 className="text-4xl font-bold text-yellow-400 sm:text-5xl sm:tracking-tight lg:text-5xl mt-12">
-        Website Packages
-      </h2>
       <div className="max-w-7xl mx-auto px-4 bg-white sm:px-6 lg:px-8 mb-12">
         {/* Tiers */}
         <div className="mt-10 md:mt-16 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-8">
@@ -112,13 +70,14 @@ export default function PricingPage() {
                   </p>
                 ) : null}
                 <p className="mt-4 flex items-baseline text-gray-900 justify-center">
-                  <span className="text-5xl font-extrabold tracking-tight ">
+                  <span className="text-4xl font-extrabold tracking-tight ">
                     ${tier.price}
                   </span>
                   <span className="ml-1 text-xl font-semibold">
                     {tier.frequency}
                   </span>
                 </p>
+
                 <p className="mt-6 text-gray-500">{tier.description}</p>
 
                 {/* Feature list */}
@@ -133,9 +92,6 @@ export default function PricingPage() {
                     </li>
                   ))}
                 </ul>
-              </div>
-              <div className="mt-6">
-                <p>Additional pages are $200</p>
               </div>
 
               <Link
@@ -153,11 +109,6 @@ export default function PricingPage() {
           ))}
         </div>
       </div>
-      <h2 className="text-4xl font-bold text-yellow-400 sm:text-5xl sm:tracking-tight lg:text-5xl mt-24">
-        Additional Options
-      </h2>
-      <PricingBlock />
-      <Footer />
     </div>
   );
 }
