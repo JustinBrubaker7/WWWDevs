@@ -10,40 +10,36 @@ import {
 } from "@heroicons/react/outline";
 
 const features = [
-  {
-    name: "Custom Built Websites",
-    icon: GlobeIcon,
-    description: "Our websites are custom built to meet the needs of your business.",
-  },
-  {
-    name: "Web Applications",
-    icon: CubeTransparentIcon,
-    description:
-      "Have an idea for an application but don't know where to start? We can help.",
-  },
-  {
-    name: "Streamlined Process",
-    icon: RefreshIcon,
-    description:
-      "We make it easy to get started with your project, from start to finish.",
-  },
-  {
-    name: "Packages That Fit Your Budget",
-    icon: BadgeCheckIcon,
-    description: "With various package options, we offer something for every budget.",
-  },
-  {
-    name: "Ecommerce Store Setup",
-    icon: CollectionIcon,
-    description:
-      "Sell products online? We can help you set up and design a store that sells.",
-  },
-  {
-    name: "Outstanding Custom Service",
-    icon: UserCircleIcon,
-    description:
-      "We will be by your side from start to finish. During and beyond, we are here for you.",
-  },
+    {
+        name: 'Custom Built Websites',
+        icon: GlobeIcon,
+        description: 'Our websites are custom built to meet the needs of your business.',
+    },
+    {
+        name: 'Web Applications',
+        icon: CubeTransparentIcon,
+        description: "Have an idea for an application but don't know where to start? We can help.",
+    },
+    {
+        name: 'Custom Software Solutions',
+        icon: BadgeCheckIcon,
+        description: 'Have a problem? We can create a software solution to solve it.',
+    },
+    {
+        name: 'Streamlined Process',
+        icon: RefreshIcon,
+        description: 'We make it easy to get started with your project, from start to finish.',
+    },
+    {
+        name: 'Ecommerce Store Setup',
+        icon: CollectionIcon,
+        description: 'Sell products online? We can help you set up and design a store that sells.',
+    },
+    {
+        name: 'Outstanding Custom Service',
+        icon: UserCircleIcon,
+        description: 'We will be by your side from start to finish. During and beyond, we are here for you.',
+    },
 ];
 
 export default function FeaturesSection() {
@@ -57,7 +53,7 @@ export default function FeaturesSection() {
           Everything you need from a website or web application
         </p>
         <p className="mt-5 max-w-prose mx-auto text-xl text-gray-500">
-          We know how difficult and time consuming it can be to get a website up and running. 
+          We know how difficult and time consuming it can be to get a website or software up and running. 
           That's why we have a team who cares just as much as you do to handle the heavy lifting. We've got everything you need to make your vision a 
           reality and we will be with you every step of the way.
         </p>

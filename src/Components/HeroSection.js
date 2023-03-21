@@ -18,7 +18,7 @@ export default function HeroSection() {
                     className="inline-flex items-center text-white bg-black rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200"
                   >
                     <span className="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-yellow-500 rounded-full">
-                      Need A Website
+                      Need A Custom Software Solution
                     </span>
                     <span className="ml-4 text-sm">
                       Contact Us To Get Started
@@ -31,12 +31,12 @@ export default function HeroSection() {
                   <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
                     <span className="block">We Make</span>
                     <span className="block text-yellow-400">
-                      Killer Websites
+                      Killer Web Apps
                     </span>
                   </h1>
-                  <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                    Our websites are built with the latest technologies and are
-                    a great way to grow your business online. We build websites
+                  <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-lg">
+                    Our software solutions are built with the latest technologies and are
+                    a great way to grow your business online. We build applications
                     that are responsive, fast, and secure but won't break the
                     bank.
                   </p>
